@@ -1,11 +1,32 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import logo from "./assets/netflixlogo.png"
-import bgimage from "./assets/netflix_background_image.jpg"
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import logo from "../../assets/netflixlogo.png"
+import bgimage from "../../assets/netflix_background_image.jpg"
 import { HiTranslate } from "react-icons/hi";
-import Header from './Components/HeroSection/Header';
+import Header from './Header';
 
 const Home = () => {
+    const moviePages =useNavigate()
+
+    const [loginHere,setLoginHere]=useState({
+        email:"",
+    })
+    console.log(loginHere);
+    console.log(loginHere);
+
+    const inputChange = (e) => {
+        const { name, value } = e.target
+        setLoginHere({ ...loginHere, [name]: value })
+    }
+    const handleClick = ()=>{
+        const loginData= JSON.parse (localStorage.getItem("userID"));
+        if(loginHere.email===loginData.email){
+            moviePages("/movie");
+            alert("succufully") 
+        } else if(loginHere.email!==loginData.email){
+            alert("you are not ragister")
+        }
+    }
     return (
         <>
             <div className='text-white m-0'>
@@ -40,10 +61,12 @@ const Home = () => {
                         {/* login section */}
                         <div className='flex items-center gap-2 mb-6'>
                             <div className='border-2 border-gray-500 h-12 w-[20rem] rounded-md'>
-                                <input className=' bg-[#282626] h-11 w-[19.8rem] rounded-md p-2 text-lg' type="text" placeholder='Email address' />
+                                <input onChange={inputChange}
+                                name='email'
+                                value={loginHere.value} className=' bg-[#282626] h-11 w-[19.8rem] rounded-md p-2 text-lg' type="text" placeholder='Email address' />
                             </div>
                             <div>
-                            <button className='bg-red-600 h-12 w-36 rounded-md flex items-center justify-center gap-1 font-bold text-lg'>
+                            <button onClick={handleClick} className='bg-red-600 h-12 w-36 rounded-md flex items-center justify-center gap-1 font-bold text-lg'>
                                 Get Started
                             <svg  className="bg-red-600"width="20" height="20" >
                                 <path className="bg-red-600"  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg>
