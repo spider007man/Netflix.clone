@@ -3,32 +3,34 @@ import { Link } from 'react-router-dom'
 import logo from "./assets/netflixlogo.png"
 import bgimage from "./assets/netflix_background_image.jpg"
 import { HiTranslate } from "react-icons/hi";
-import Header from './Header/Header';
+import Header from './Components/HeroSection/Header';
 
 const Home = () => {
     return (
         <>
-            <div className='text-white'>
-                <img className='absolute h-full w-full overflow-auto' src={bgimage}alt="" />
-                <div className='bg-[#000000a0] pb-8 relative'>
+            <div className='text-white m-0'>
+                <img className=' absolute h-[100%] w-[100vw] overflow-auto' src={bgimage}alt="" />
+                <div className='bg-[#000000a0] relative'>
 
                 <div className='relative'>
                     {/* navbar section */}
                     <div className='flex justify-around items-center mt-1 '>
-                        <img className='h-[100px]' src={logo} alt="logo" />
+                        <img className=' h-[100px]' src={logo} alt="logo" />
                         <div className='flex justify-around gap-3'>
                             <HiTranslate className='absolute  mr-[12rem] mt-2 ' />
                             <select className='border-2 bg-[#282626] border-gray-400 rounded-md p-[0.2rem] w-[8rem] pl-8'>
                                 <option value="">ENGLISH</option>
                                 <option value="">हिन्दी</option>
                             </select>
-                            <button className='bg-red-600 w-24 rounded-md  font-bold '>Sign in</button>
+                            <Link to="/login">
+                            <button className='bg-red-600 w-24 h-8 rounded-sm  font-bold '>Sign in</button>
+                            </Link>
                         </div>
                     </div>
                     {/* navbar section end */}
 
                     {/* hero section */}
-                    <div className='flex flex-col justify-center items-center mt-24 gap-6'>
+                    <div className='flex flex-col justify-center items-center mt-20 pb-12 gap-6'>
                         <div className='flex flex-col justify-center items-center  '>
                             <h1 className='text-5xl font-bold'>The biggest Indian hits. Ready to watch here</h1>
                             <h1 className='text-5xl font-bold'>from ₹ 149.</h1>
@@ -53,8 +55,8 @@ const Home = () => {
                     {/* hero section end */}
                 </div>
             </div>
-                </div>
             <Header/>
+                </div>
         </>
     )
 }
