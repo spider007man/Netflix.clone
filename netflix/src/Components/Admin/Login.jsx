@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import logo from "../../assets/netflixlogo.png"
 import bgimage from "../../assets/netflix_background_image.jpg"
-import Header from './Header'
+import Fotter from './Fotter'
 import { useNavigate } from 'react-router-dom'
 const Login = () => {
 
@@ -61,7 +61,7 @@ const Login = () => {
                     </form>
 
                 </div>
-                <Header />
+                <Fotter />
             </div>
         </>
     )

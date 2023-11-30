@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import logo from "../../assets/netflixlogo.png"
 import bgimage from "../../assets/netflix_background_image.jpg"
 import { HiTranslate } from "react-icons/hi";
-import Header from './Header';
+import Fotter from './Fotter';
 
 const Home = () => {
     const moviePages =useNavigate()
@@ -78,7 +78,7 @@ const Home = () => {
                     {/* hero section end */}
                 </div>
             </div>
-            <Header/>
+            <Fotter/>
                 </div>
         </>
     )
