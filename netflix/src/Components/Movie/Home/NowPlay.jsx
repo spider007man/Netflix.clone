@@ -16,7 +16,7 @@ const NowPlay = () => {
         setMovieNow(res.data.results);
 
       })
-  })
+  },[])
 // console.log( "now play data",movieNow);
   return (
     <div>
