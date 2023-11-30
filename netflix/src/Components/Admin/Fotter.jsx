@@ -2,7 +2,7 @@ import React from 'react'
 import { HiTranslate } from "react-icons/hi";
 
 
-const Header = () => {
+const Fotter = () => {
     return (
         <>
             <div className='bg-black text-gray-400 relative '>
@@ -39,4 +39,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Fotter

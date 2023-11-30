@@ -2,7 +2,12 @@ import React from 'react'
 
 const Fotter = () => {
   return (
-    <div>Fotter</div>
+    <>
+        <nav>
+          hwldjweod
+        </nav>
+
+    </>
   )
 }
 
