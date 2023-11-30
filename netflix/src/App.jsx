@@ -5,6 +5,7 @@ import Home from './Components/Admin/Home'
 // import MoviePage from './Components/Movie/Home/MoviePage'
 import Fotter from './Components/Admin/Fotter'
 import Layout from './Components/Movie/Layout/Layout'
+import MovieDetail from './Components/DetailPage/MovieDetail'
 
 
 const App = () => {
@@ -15,8 +16,9 @@ const App = () => {
           <Route path='/pages' element={<Fotter/>} />
           <Route path='/' element={<Home/>} />
           <Route path='/login' element={<Login/>} />
-          {/* <Route path='/movie' element={<MoviePage/>} /> */}
           <Route path='/movie' element={<Layout/>} />
+          <Route path='/detail' element={<MovieDetail/>} />
+
           
         </Routes>
       </BrowserRouter>

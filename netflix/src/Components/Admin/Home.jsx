@@ -11,8 +11,6 @@ const Home = () => {
     const [loginHere,setLoginHere]=useState({
         email:"",
     })
-    console.log(loginHere);
-    console.log(loginHere);
 
     const inputChange = (e) => {
         const { name, value } = e.target
