@@ -17,13 +17,17 @@ const Home = () => {
         setLoginHere({ ...loginHere, [name]: value })
     }
     const handleClick = ()=>{
-        const loginData= JSON.parse (localStorage.getItem("userID"));
+        const loginData= JSON.parse (localStorage.getItem("userID"))
         if(loginHere.email===loginData.email){
+            localStorage.setItem("netflixID",true)
             moviePages("/movie");
             alert("succufully") 
-        } else if(loginHere.email!==loginData.email){
-            alert("you are not ragister")
-        }
+        } else if (loginData===""){
+            alert("you are not ragester")
+          }
+          else{
+            alert("you are not ragester")
+          }
     }
     return (
         <>

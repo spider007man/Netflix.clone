@@ -26,7 +26,7 @@ const Card = ({movieNow}) => {
        
        <div className='w-flex flex-col items-center justify-center'>
          <div className='h-[180px] w-[300px] m-2 overflow-hidden'>
-          <Link to={`/detail/${movieNow.id}`}>
+          <Link to={`/detail/${data?.id}`}>
            <img className='h-[180px] w-[300px] object-cover' src={`${IMG_URL}${data.backdrop_path}`} alt="" />
           </Link>
          </div>

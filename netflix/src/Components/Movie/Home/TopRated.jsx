@@ -17,7 +17,7 @@ const TopRated = () => {
       setMovieNow(res.data.results);
 
     })
-  })
+  },[])
 
 
 

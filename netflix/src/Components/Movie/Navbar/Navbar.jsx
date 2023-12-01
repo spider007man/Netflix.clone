@@ -10,7 +10,7 @@ const Navbar = () => {
   
 
   const logOutClick = ()=>{
-    localStorage.removeItem("userID");
+    localStorage.removeItem("netflixID" ,true);
     homePage('/')
   }
 

@@ -17,7 +17,7 @@ const Popular = () => {
       setMovieNow(res.data.results);
 
     })
-  })
+  },[])
 
 
 

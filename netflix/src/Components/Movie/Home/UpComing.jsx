@@ -17,7 +17,7 @@ const UpComing = () => {
       setMovieNow(res.data.results);
 
     })
-  })
+  },[])
 
 
 
