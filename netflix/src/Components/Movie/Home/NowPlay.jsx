@@ -7,7 +7,7 @@ import Card from '../../Card/Card'
 
 const NowPlay = () => {
 
-  const [movieNow, setMovieNow] = useState([]);
+  const [movieNow, setMovieNow] = useState([]) ;
 
 
   useEffect(() => {
